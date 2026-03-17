@@ -1,0 +1,61 @@
+---
+const links = [
+  { label: 'Servicios', href: '#servicios' },
+  { label: '¿Por qué nosotros?', href: '#por-que' },
+  { label: 'Precios', href: '#precios' },
+  { label: 'Nosotros', href: '#nosotros' },
+];
+---
+<nav class="ld-nav">
+  <div class="ld-logo">
+    <span>Limón</span> Digital
+  </div>
+  <div class="ld-nav-links">
+    {links.map(l => <a href={l.href}>{l.label}</a>)}
+    <a href="#contacto" class="btn-primary">Cotizar proyecto</a>
+  </div>
+</nav>
+
+<style>
+  .ld-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: sticky;
+    top: 0;
+    background: rgba(47,47,47,0.92);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+  .ld-logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
+  .ld-logo span { color: var(--limon); }
+  .ld-nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  .ld-nav-links a {
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+  .ld-nav-links a:hover { color: var(--white); }
+  .btn-primary {
+    background: var(--limon) !important;
+    color: var(--dark) !important;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 13px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+</style>

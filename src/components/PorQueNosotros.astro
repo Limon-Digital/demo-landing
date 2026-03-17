@@ -1,0 +1,42 @@
+---
+const razones = [
+  { num: '01', titulo: 'AI First', desc: 'Usamos inteligencia artificial en cada etapa para entregarte más rápido y con mejor calidad.' },
+  { num: '02', titulo: 'Entrega en 7 días', desc: 'Sin esperas de semanas. Tu landing está lista y funcionando en tiempo récord.' },
+  { num: '03', titulo: 'Precio justo y claro', desc: 'Sin letras chicas. Sabes exactamente qué pagas y qué recibes desde el primer día.' },
+  { num: '04', titulo: 'Soporte continuo', desc: 'No desaparecemos después de la entrega. Estamos disponibles para mantener tu sitio.' },
+];
+---
+<section id="por-que" class="section">
+  <div class="inner">
+    <div class="col-left">
+      <span class="label">¿Por qué Limón Digital?</span>
+      <h2>Hacemos las cosas<br>de otra forma</h2>
+      <p class="sub">No somos una agencia grande con procesos lentos. Somos un equipo pequeño, ágil y comprometido.</p>
+    </div>
+    <ul class="lista">
+      {razones.map((r, i) => (
+        <li class={i === razones.length - 1 ? 'item last' : 'item'}>
+          <span class="num">{r.num}</span>
+          <div>
+            <strong>{r.titulo}</strong>
+            <p>{r.desc}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .section { padding: 80px 48px; background: #1a1a1a; border-top: 1px solid rgba(255,255,255,0.06); }
+  .inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--limon); display: block; margin-bottom: 16px; }
+  h2 { font-family: var(--font-display); font-size: 38px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
+  .sub { font-size: 15px; color: rgba(255,255,255,0.5); font-weight: 300; line-height: 1.8; }
+  .lista { list-style: none; }
+  .item { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); align-items: flex-start; }
+  .item.last { border-bottom: none; }
+  .num { font-family: var(--font-display); font-size: 11px; font-weight: 800; color: var(--limon); letter-spacing: 1px; min-width: 28px; margin-top: 2px; }
+  strong { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+</style>

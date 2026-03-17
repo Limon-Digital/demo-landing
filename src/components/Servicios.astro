@@ -1,0 +1,49 @@
+---
+const servicios = [
+  { icon: '🖥️', nombre: 'Landing Page', desc: 'Página de aterrizaje rápida, optimizada para convertir visitantes en clientes.' },
+  { icon: '🔧', nombre: 'Mantención mensual', desc: 'Actualizaciones de contenido, soporte técnico y monitoreo incluidos cada mes.' },
+  { icon: '📈', nombre: 'SEO básico', desc: 'Tu negocio aparece en Google desde el inicio. Configuración y buenas prácticas incluidas.' },
+  { icon: '⚡', nombre: 'Rendimiento', desc: 'Sitios ultrarrápidos con tecnología de punta. Carga en menos de 2 segundos.' },
+  { icon: '📱', nombre: 'Diseño responsive', desc: 'Se ve perfecto en celular, tablet y escritorio. Sin excepciones.' },
+  { icon: '🔒', nombre: 'SSL + Hosting', desc: 'Certificado de seguridad y alojamiento incluido en todos los planes.' },
+];
+---
+<section id="servicios" class="section">
+  <div class="inner">
+    <span class="label">Lo que hacemos</span>
+    <h2>Servicios diseñados<br>para crecer</h2>
+    <p class="sub">Cada entregable pensado para que tu negocio funcione en internet sin complicaciones.</p>
+    <div class="grid">
+      {servicios.map(s => (
+        <div class="card">
+          <div class="icon">{s.icon}</div>
+          <div class="nombre">{s.nombre}</div>
+          <p>{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section { padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .inner { max-width: 1100px; margin: 0 auto; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--limon); display: block; margin-bottom: 16px; }
+  h2 { font-family: var(--font-display); font-size: 38px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 16px; }
+  .sub { font-size: 15px; color: rgba(255,255,255,0.5); font-weight: 300; max-width: 480px; line-height: 1.8; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 52px;
+  }
+  .card { background: var(--dark); padding: 36px 28px; transition: background 0.2s; }
+  .card:hover { background: #1f1f1f; }
+  .icon { width: 40px; height: 40px; background: rgba(196,229,56,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 20px; }
+  .nombre { font-family: var(--font-display); font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+  p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+</style>
