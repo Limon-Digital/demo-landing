@@ -34,7 +34,29 @@
     </div>
   </div>
 </section>
+<script>
+  // Animación de entrada del hero
+  const heroText = document.querySelector('.hero-text') as HTMLElement;
+  const heroVisual = document.querySelector('.hero-visual') as HTMLElement;
 
+  if (heroText) {
+    heroText.style.opacity = '0';
+    heroText.style.transform = 'translateY(32px)';
+    heroText.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+  }
+  if (heroVisual) {
+    heroVisual.style.opacity = '0';
+    heroVisual.style.transform = 'translateY(24px)';
+    heroVisual.style.transition = 'opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s';
+  }
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if (heroText) { heroText.style.opacity = '1'; heroText.style.transform = 'translateY(0)'; }
+      if (heroVisual) { heroVisual.style.opacity = '1'; heroVisual.style.transform = 'translateY(0)'; }
+    }, 100);
+  });
+</script>
 <style>
   .hero-wrap { max-width: 1400px; margin: 0 auto; }
   .hero {
