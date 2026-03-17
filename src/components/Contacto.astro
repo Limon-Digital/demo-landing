@@ -12,14 +12,16 @@
         <div class="dato"><label>Ubicación</label><p>Valparaíso, Chile · 100% remoto</p></div>
       </div>
     </div>
-    <form class="form" onsubmit="return false">
+    <form class="form" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contacto" />
+      <input type="hidden" name="bot-field" style="display:none" />
       <div class="row">
-        <input class="input" type="text" placeholder="Nombre" />
-        <input class="input" type="text" placeholder="Empresa" />
+        <input class="input" type="text" name="nombre" placeholder="Nombre" />
+        <input class="input" type="text" name="empresa" placeholder="Empresa" />
       </div>
-      <input class="input" type="email" placeholder="Email" />
-      <input class="input" type="text" placeholder="¿Qué necesitas?" />
-      <textarea class="input" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
+      <input class="input" type="email" name="email" placeholder="Email" />
+      <input class="input" type="text" name="necesidad" placeholder="¿Qué necesitas?" />
+      <textarea class="input" name="mensaje" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
       <button type="submit" class="btn">Enviar mensaje →</button>
     </form>
   </div>
