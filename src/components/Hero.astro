@@ -166,7 +166,22 @@
   @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; padding: 60px 24px 40px; min-height: auto; gap: 40px; }
   h1 { font-size: 38px; letter-spacing: -1px; }
-  .hero-visual { height: 280px; }
-  .card { width: 200px; }
+  .hero-visual {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
   }
+  .card {
+    position: relative;
+    width: 100%;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  .card-main { z-index: 2; }
+  .card-secondary { z-index: 1; }
+}
 </style>
