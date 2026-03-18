@@ -1,26 +1,51 @@
 ---
 const planes = [
   {
-    nombre: 'Básico',
-    precio: '149.990',
-    periodo: 'pago único + $19.990/mes mantención',
-    features: ['Landing page 1 página', 'Diseño personalizado', 'Formulario de contacto', 'SSL + Hosting incluido', 'SEO básico'],
+    nombre: 'Emprende',
+    precio: '149.800',
+    periodo: 'pago único (IVA incluido)',
+    mantencion: '+ $29.750/mes mantención',
+    features: [
+      'Landing 1 a 2 secciones',
+      'Hero + llamada a la acción',
+      'Formulario de contacto',
+      'Responsive mobile',
+      'Hosting incluido',
+      'Soporte ticket 48 h',
+    ],
     destacado: false,
     cta: 'Empezar →',
   },
   {
-    nombre: 'Pro',
-    precio: '249.990',
-    periodo: 'pago único + $29.990/mes mantención',
-    features: ['Landing hasta 5 secciones', 'Diseño premium con animaciones', 'Integración WhatsApp / redes', 'Google Analytics', '2 revisiones de diseño', 'Soporte prioritario'],
+    nombre: 'Emprende Pro',
+    precio: '357.000',
+    periodo: 'pago único (IVA incluido)',
+    mantencion: '+ $59.500/mes mantención',
+    features: [
+      'Landing completa 5 secciones',
+      'Hero, servicios, sobre nosotros',
+      'Galería / portafolio',
+      'Testimonios + contacto',
+      'SEO básico on-page',
+      'Responsive mobile',
+      'Soporte ticket 24 h',
+    ],
     destacado: true,
     cta: 'Empezar →',
   },
   {
-    nombre: 'Custom',
+    nombre: 'Corporativo',
     precio: null,
-    periodo: 'cotización personalizada',
-    features: ['Multipage / tienda', 'Integraciones a medida', 'Panel de administración', 'Automatizaciones', 'SLA garantizado'],
+    periodo: 'desde $595.000 (IVA incluido)',
+    mantencion: '+ $119.000/mes mantención',
+    features: [
+      'Sin límite de secciones',
+      'Animaciones / interactividad',
+      'Integraciones y formularios',
+      'Blog / CMS opcional',
+      'SEO técnico',
+      'Soporte prioritario mismo día',
+    ],
     destacado: false,
     cta: 'Conversemos →',
   },
@@ -41,6 +66,7 @@ const planes = [
             : <div class="precio" style="font-size:32px">A medida</div>
           }
           <div class="periodo">{p.periodo}</div>
+          <div class="mantencion">{p.mantencion}</div>
           <ul class="features">
             {p.features.map(f => <li>{f}</li>)}
           </ul>
@@ -77,6 +103,7 @@ const planes = [
   @media (max-width: 768px) {
   .section { padding: 60px 24px; }
   .grid { grid-template-columns: 1fr; }
+  .mantencion { font-size: 11px; color: rgba(255,255,255,0.25); margin-bottom: 24px; margin-top: -18px; }
   h2 { font-size: 28px; }
   }
 </style>
