@@ -7,12 +7,12 @@
       <h2>¿Listo para empezar?<br>Hablemos.</h2>
       <p class="sub">Cuéntanos de tu proyecto y te respondemos en menos de 24 horas con una propuesta concreta.</p>
       <div class="datos">
-        <div class="dato"><label>Email</label><p>hola@limondigital.cl</p></div>
-        <div class="dato"><label>WhatsApp</label><p>+56 9 XXXX XXXX</p></div>
+        <div class="dato"><label>Email</label><p>contacto@limondigital.cl</p></div>
+        <div class="dato"><label>WhatsApp</label><p>+56 9 4747 2145</p></div>
         <div class="dato"><label>Ubicación</label><p>Valparaíso, Chile · 100% remoto</p></div>
       </div>
     </div>
-    <form class="form" name="contacto" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form class="form" name="contacto-landing-pro" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
       <input type="hidden" name="form-name" value="contacto" />
       <input type="hidden" name="bot-field" style="display:none" />
       <div class="row">
@@ -22,7 +22,8 @@
       <input class="input" type="email" name="email" placeholder="Email" />
       <input class="input" type="text" name="necesidad" placeholder="¿Qué necesitas?" />
       <textarea class="input" name="mensaje" placeholder="Cuéntanos más sobre tu proyecto..."></textarea>
-      <button type="submit" class="btn">Enviar mensaje →</button>
+      <button type="submit" class="btn btn-disabled" disabled>Formulario de demo — no funcional</button>
+      <a href="https://limondigital.cl/precios" target="_blank" class="btn-cta">Ver planes y precios →</a>
     </form>
   </div>
 </section>
@@ -44,6 +45,11 @@
   textarea.input { resize: none; height: 100px; }
   .btn { background: var(--limon); color: var(--dark); border: none; padding: 14px; border-radius: 6px; font-family: var(--font-body); font-weight: 500; font-size: 14px; cursor: pointer; transition: opacity 0.2s; width: 100%; }
   .btn:hover { opacity: 0.88; }
+  .btn-disabled { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.25); cursor: not-allowed; opacity: 1; }
+  .btn-disabled:hover { opacity: 1; }
+  .btn-cta { background: transparent; color: var(--limon); border: 1px solid var(--limon); padding: 14px; border-radius: 6px; font-family: var(--font-body); font-weight: 500; font-size: 15px; text-decoration: none; text-align: center; width: 100%; display: block; transition: background 0.2s, color 0.2s; }
+  .btn-cta:hover { background: var(--limon); color: var(--dark); }
+
   @media (max-width: 768px) {
   .section { padding: 60px 24px; }
   .inner { grid-template-columns: 1fr; gap: 40px; }

@@ -7,9 +7,7 @@ const links = [
 ];
 ---
 <nav class="ld-nav">
-  <div class="ld-logo">
-    <span>Limón</span> Digital
-  </div>
+  <a href="/" class="logo"><span>LIMÓN</span> DIGITAL</a>
   <div class="ld-nav-links" id="nav-links">
     {links.map(l => <a href={l.href}>{l.label}</a>)}
     <a href="#contacto" class="btn-primary">Cotizar proyecto</a>
@@ -53,13 +51,15 @@ const links = [
     backdrop-filter: blur(12px);
     z-index: 100;
   }
-  .ld-logo {
+  .logo {
     font-family: var(--font-display);
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     letter-spacing: -0.5px;
+    text-decoration: none;
+    color: var(--white);
   }
-  .ld-logo span { color: var(--limon); }
+  .logo span { color: var(--limon); font-weight: 800; }
   .ld-nav-links {
     display: flex;
     gap: 32px;
